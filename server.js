@@ -10,6 +10,13 @@ const bodyParser=require('body-parser')
 const app=express();
 
 app.use(cors());
+const corsOptions = {
+  origin: '*',
+  methods: 'POST',
+  credentials: true, // Include cookies in the CORS request
+};
+
+app.use(cors(corsOptions));
 
 const PORT =process.env.PORT ||3001
 app.use(bodyParser.json());
