@@ -43,7 +43,7 @@ app.post('/send-email',(req,res)=>{
             subject:'Enqueries from website',
             html:`<html>
             <head>
-              <style>
+             
               <style>
               body {
                 font-family: PT Serif;
