@@ -40,32 +40,54 @@ app.post('/send-email',(req,res)=>{
         const options={
             from: 'Company',
             to: process.env.SEND_TO,
-            subject:'message from client',
+            subject:'Enqueries from website',
             html:`<html>
             <head>
               <style>
-                body {
-                  font-family: PT serif;
-                  background-color: #f4f4f4;
-                  color: #333;
-                }
-                h1 {
-                  color: #007bff;
-                }
-                p {
-                  margin-bottom: 10px;
-                }
+              <style>
+              body {
+                font-family: PT Serif;
+                background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+                background-blend-mode: normal, lighten, soft-light;
+                padding: 0;
+              }
+      
+              .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #ffffff;
+                box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+              }
+      
+              h1 {
+                  text-align: center;
+                color: #333333;
+              }
+      
+              p {
+                padding-left: 80px;
+                margin-bottom: 10px;
+              }
+      
+              strong {
+                font-weight: bold;
+              }
               </style>
             </head>
             <body>
-              <h1>Contact Form Submission</h1>
+            <div class=container>
+              <h1>Enqueries from Website</h1>
               <p><strong>Name:</strong> ${data.name}</p>
               <p><strong>Email:</strong> ${data.email}</p>
               <p><strong>Phoneno:</strong> ${data.phone}</p>
               <p><strong>Message:</strong> ${data.message}</p>
+            </div>
             </body>
           </html>`
         }
+
         transporter.sendMail(options,(err,info)=>{
             if(err)
             {
