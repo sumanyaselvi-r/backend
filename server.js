@@ -69,7 +69,7 @@ app.post('/send-email',(req,res)=>{
               }
       
               p {
-                padding-left: 10px;
+                padding-left: 80px;
                 margin-bottom: 10px;
               }
       
