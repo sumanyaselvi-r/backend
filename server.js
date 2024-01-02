@@ -58,8 +58,7 @@ app.post('/send-email',(req,res)=>{
                 max-width: 600px;
                 margin: 20px auto;
                 padding: 20px;
-                background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-                background-blend-mode: normal, lighten, soft-light;
+              background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
                 box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
               }
